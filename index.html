@@ -34,21 +34,11 @@
                     Ship furry related projects.<br>
                     Get furry related prizes.
                 </p>
-                <form class="hero-auth-form" id="heroAuthForm" action="/login" method="GET">
-                    <input type="email" name="email" class="hero-email-input" placeholder="you@example.com" autocomplete="email" required>
-                    <button type="submit" class="hero-start-btn">Start &rarr;</button>
-                </form>
-                <div class="hero-dashboard-wrap" id="heroDashboardWrap">
-                    <a href="/dashboard" class="hero-start-btn hero-dashboard-btn">Dashboard &rarr;</a>
+                <div class="hero-ship-wrap">
+                    <a href="https://forms.hackclub.com/t/s5ESiXfvTXus" target="_blank" rel="noopener noreferrer" class="hero-start-btn hero-ship-btn">Ship &rarr;</a>
                 </div>
                 <p class="hero-credits">Made with <img src="images/black-heart-icon.png" alt="heart" class="heart-icon"> by <strong>agm</strong> and <strong>ilovepasta</strong> for <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">Hack Club</a></p>
             </div>
-            <a href="/login" class="nav-login">
-                <span class="nav-login-btn">Login with Hack Club</span>
-                <svg class="nav-login-tail" viewBox="0 -8 215 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="navTailPath" d="M 14.0,0.0 C 14.7,3.0 14.5,12.2 18.0,18.0 C 21.5,23.8 27.7,30.5 35.0,35.0 C 42.3,39.5 52.0,44.7 62.0,45.0 C 72.0,45.3 84.0,39.7 95.0,37.0 C 106.0,34.3 117.2,29.7 128.0,29.0 C 138.8,28.3 150.3,31.2 160.0,33.0 C 169.7,34.8 181.7,38.8 186.0,40.0" stroke="#211d1b" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </a>
         </header>
         <section class="how-it-works" id="howItWorks">
             <div class="pathway-header">
@@ -145,10 +135,6 @@
                             <img src="images/prizes-thingy.png" alt="Prizes" class="prizes-img">
                         </div>
                     </div>
-                </div>
-
-                <div class="pathway-footer">
-                    <a href="/login" class="pathway-submit-btn">Submit Project &rarr;</a>
                 </div>
             </div>
         </section>
@@ -264,7 +250,6 @@
         </footer>
         <script src="faq.js"></script>
         <script src="intro.js"></script>
-        <script src="tail.js"></script>
         <script src="pathway.js"></script>
         <script>
             (function() {
@@ -274,8 +259,6 @@
                             try { localStorage.setItem('paw_user_logged_in', 'true'); } catch (e) {}
                             document.documentElement.classList.add('is-logged-in');
                             document.body.classList.add('is-logged-in');
-                            var pathwayBtn = document.querySelector('.pathway-submit-btn');
-                            if (pathwayBtn) pathwayBtn.href = '/dashboard';
                         } else {
                             try { localStorage.removeItem('paw_user_logged_in'); } catch (e) {}
                             document.documentElement.classList.remove('is-logged-in');
